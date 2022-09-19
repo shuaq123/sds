@@ -34,7 +34,6 @@ public class userGroupServersImp implements userGroupServers {
     @Override
     public String addgroup(userGroupModel group) {
 
-
         int a = UsergroupDao.insertSelective(group);
         if (a==1) return "添加分类成功";
         return "添加失败";
