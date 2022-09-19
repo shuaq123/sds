@@ -1,0 +1,26 @@
+server:
+  port: 9090
+
+spring:
+  #  数据库配置
+  datasource:
+    url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/${DB_NAME:liuzijian_study}?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:Zxcv1234}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+#  type-aliases-package: dome.web.oem
+#  config-location: classpath:mybatis/mybatis-config.xml
+  check-config-location: true
+  mapper-locations: classpath:mapper/*.xml
+
+#显示执行的sql
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
