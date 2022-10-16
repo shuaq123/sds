@@ -21,7 +21,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("进入到拦截器中:preHandle() 方法");
         String info = new LoginCheck().tokenCheck(request);
-        if (info.equals("token已过期")) {
+        if (info.equals("token已过期") || info.equals("用户不存在") ) {
             JSONObject res = new JSONObject();
             res.put("success", false);
             res.put("message", "token out");

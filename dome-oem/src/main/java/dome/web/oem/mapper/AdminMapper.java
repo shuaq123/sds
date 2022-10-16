@@ -17,4 +17,5 @@ public interface AdminMapper extends BaseMapper<Users> {
     @MapKey("id")
     List<Map<String, Object>> adminlist();
 
+
 }

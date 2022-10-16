@@ -30,14 +30,14 @@ import java.util.Map;
  19      * @param map     其他私有数据
  20      * @return
  21      */
-    public String createJwt(String id, String subject, Map<String, Object> map) {
+    public String createJwt(String id, String subject,String agencyid, Map<String, Object> map) {
 
                      //1、设置失效时间啊
                      long now = System.currentTimeMillis();  //毫秒
                      long exp = now + 377777777;
 
                      //2、创建JwtBuilder
-                     JwtBuilder jwtBuilder = Jwts.builder().setId(id).setSubject(subject)
+                     JwtBuilder jwtBuilder = Jwts.builder().setId(id).setSubject(subject).setSubject(agencyid)
                              .setIssuedAt(new Date())
                              //设置签名防止篡改
                             .signWith(SignatureAlgorithm.HS256, "userlogin");

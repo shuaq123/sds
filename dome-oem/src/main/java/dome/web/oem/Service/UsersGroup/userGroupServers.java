@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.servers.Servers;
 
 import java.util.List;
 
-
 public interface userGroupServers extends BaseService<userGroupModel> {
 
     String addgroup(userGroupModel group);

@@ -144,7 +144,7 @@ public class usersServiceImp implements usersServers {
         if(!us.get(0).getPassword().equals(u.getPassword())) return ResultSet.success("密码错误");
         System.out.println(us.get(0));
         map.put("id",us.get(0).getId());
-        String token = new JwtUtils().createJwt(String.valueOf(us.get(0).getId()),us.get(0).getName(),map);
+        String token = new JwtUtils().createJwt(String.valueOf(us.get(0).getId()),us.get(0).getName(),us.get(0).getAgencyid(),map);
         if(token != null){
             HashMap<String,String> list = new HashMap<String,String>();
             list.put("token",token);
@@ -161,7 +161,6 @@ public class usersServiceImp implements usersServers {
     public String BatchEditor(Users u) {
 
             Integer a = usersMapper.BatchEditor(u);
-
             System.out.println(a);
             if(a>0){
                 return "编辑成功";

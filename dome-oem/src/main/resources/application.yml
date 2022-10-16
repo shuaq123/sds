@@ -1,5 +1,6 @@
 server:
   port: 9090
+  context-path: /survey-project
 
 spring:
   #  数据库配置
@@ -9,17 +10,23 @@ spring:
     password: ${DB_PASSWORD:Zxcv1234}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-
 mybatis:
 #  type-aliases-package: dome.web.oem
 #  config-location: classpath:mybatis/mybatis-config.xml
   check-config-location: true
   mapper-locations: classpath:mapper/*.xml
 
+
 #显示执行的sql
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#spring boot集成mybatis的方式打印sql
+logging:
+  level:
+    com.xxx.mapper: DEBUG
+
 
 
 
