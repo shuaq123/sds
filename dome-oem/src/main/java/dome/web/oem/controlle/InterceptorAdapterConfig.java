@@ -17,7 +17,7 @@ public class InterceptorAdapterConfig  implements WebMvcConfigurer {
         //注册自己的拦截器并设置拦截的请求路径
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/**")
-                .excludePathPatterns("/api/login");
+                .excludePathPatterns("/api/login","/first/swagger-ui.html");
     }
 }
 

@@ -7,9 +7,11 @@
         <groupId>dome</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
+<!--    <groupId>com.example.oem</groupId>-->
     <artifactId>dome-oem</artifactId>
+
     <dependencies>
         <!-- 内部子模块引用 -->
         <dependency>

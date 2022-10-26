@@ -123,6 +123,20 @@ public class adminServiceImp implements adminService {
         return adminlists;
     }
 
+    @Override
+    public String delAdmin(Integer adminid) {
+        int a= AdminMappere.deleteById(adminid);
+
+        if (a>0){
+            QueryWrapper<adminRoleLink> delt = new QueryWrapper<>();
+            delt.eq("adminId",adminid);
+            AdminRoleLinkMapper.delete(delt);
+
+            return "删除成功";
+        }
+        return "删除失败";
+    }
+
 
     @Override
     public int insert(admin entity) {

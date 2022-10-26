@@ -5,9 +5,14 @@ server:
 spring:
   #  数据库配置
   datasource:
-    url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/${DB_NAME:liuzijian_study}?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
-    username: ${DB_USER:root}
-    password: ${DB_PASSWORD:Zxcv1234}
+#    url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/${DB_NAME:liuzijian_study}?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+#    username: ${DB_USER:root}
+#    password: ${DB_PASSWORD:Zxcv1234}
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    #旧版
+    url: jdbc:mysql://${DB_HOST:rm-wz8907v21w03hav10eo.mysql.rds.aliyuncs.com}:${DB_PORT:3306}/${DB_NAME:bg3}?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: ${DB_USER:gongshike}
+    password: ${DB_PASSWORD:pH0KKtHR48Ilg8gB}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
@@ -26,6 +31,10 @@ mybatis-plus:
 logging:
   level:
     com.xxx.mapper: DEBUG
+
+#用户token
+token: eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MDM2NCIsImlhdCI6MTY2NjU5NDY3OSwic3ViIjoiMTg2NzQ1MTkzMDEiLCJleHAiOjE2NjY2Mzc4Nzl9.N4yfGOo5Mmnjwy-FRonF4dNn7Yx93uvWwlg74xxKy7s
+
 
 
 

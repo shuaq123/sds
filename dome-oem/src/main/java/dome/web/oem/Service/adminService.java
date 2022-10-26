@@ -16,4 +16,6 @@ public interface adminService extends BaseService<admin> {
 
     List<admin> getadminList(String name,Integer pagename,Integer pagesize);
 
+    String delAdmin(Integer adminid);
+
 }

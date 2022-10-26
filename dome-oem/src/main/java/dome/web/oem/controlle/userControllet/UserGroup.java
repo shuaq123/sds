@@ -3,7 +3,7 @@ package dome.web.oem.controlle.userControllet;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 //import com.example.base.HttpUtils;
 
-import com.example.base.HttpUtils;
+
 import com.example.base.JwtUtils;
 import com.example.base.LoginCheck;
 import dome.web.oem.Service.UsersGroup.userGroupServers;
@@ -36,7 +36,7 @@ public class UserGroup {
     }
     @GetMapping("/get/usergroup")
     public ResultSet getUserGroup(HttpServletRequest request){
-        String a = HttpUtils.doPost("http://www.baidu.com","a");
+
         return ResultSet.success(userGroupServer.getUserGroup());
     }
 }

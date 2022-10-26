@@ -61,5 +61,10 @@ public class adminControllet {
 
         return ResultSet.success(AdminService.getadminList(name,pageName,pagesize));
     }
+    @GetMapping("/delAadmin")
+    public ResultSet delAadmin(HttpServletRequest request,Integer adminid) throws Exception {
+        return ResultSet.success(AdminService.delAdmin(adminid));
+
+    }
 
 }

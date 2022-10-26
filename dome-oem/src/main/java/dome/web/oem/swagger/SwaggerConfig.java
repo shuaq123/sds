@@ -1,8 +1,7 @@
-package edu.wan.swagger;
-import io.swagger.annotations.Api;
+package dome.web.oem.swagger;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -13,23 +12,26 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {
+class Swagger2 {
+
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .enable(true)          // 是否禁用swagger
-                .useDefaultResponseMessages(false)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
+                .apis(RequestHandlerSelectors.basePackage("dome.web.oem.controlle"))
                 .paths(PathSelectors.any())
                 .build();
     }
+
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("swagger API文档")
-                .description("Swagger测试文档")
+                .title("Spring Boot中使用Swagger2构建RESTful APIs")
+                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
+                .termsOfServiceUrl("http://blog.didispace.com/")
+//                .contact("程序猿DD")
                 .version("1.0")
                 .build();
     }
+
 }
