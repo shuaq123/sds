@@ -1,22 +1,13 @@
-package dome.web.oem.job;
+package com.example.base.job;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.example.base.SendPostDemo;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import dome.web.oem.model.admin;
-import org.omg.CORBA.portable.InputStream;
+//import dome.web.oem.model.admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -52,7 +43,7 @@ public class Stenden {
 //        admin Admin = new admin();
 //        Integer a = -12;
 //        Integer b = 2;
-//        System.out.println(Admin);
+//        System.out.println(dataList);
 //        System.out.println(a.compareTo(b));
 
 

@@ -1,8 +1,8 @@
-package dome.web.oem.controlle;
+package com.example.base.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.base.LoginCheck;
-import dome.web.oem.model.base.ResultSet;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;

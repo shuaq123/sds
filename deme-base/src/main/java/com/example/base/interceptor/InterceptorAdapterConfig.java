@@ -1,4 +1,4 @@
-package dome.web.oem.controlle;
+package com.example.base.interceptor;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;

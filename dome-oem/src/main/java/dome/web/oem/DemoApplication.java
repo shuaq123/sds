@@ -3,6 +3,7 @@ package dome.web.oem;
 import com.example.base.SendPostDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -11,10 +12,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication()
-@ComponentScan(basePackages = {"com.example.base","dome.web.oem"})
+@ComponentScan(basePackages = {"com.example.base","dome.web.oem","com.example.service"})
 @EnableWebMvc
 @EnableAspectJAutoProxy
-@MapperScan("dome.web.oem.mapper")
+@MapperScan("oem.example.mapper")
 @EnableScheduling
 public class DemoApplication {
 

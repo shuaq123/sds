@@ -7,6 +7,8 @@
         <module>demo-model</module>
         <module>deme-base</module>
         <module>dome-oem</module>
+        <module>demo-service</module>
+        <module>dome-mapper</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -227,6 +229,16 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>2.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- Jedis依赖 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.6.3</version>
         </dependency>
 
     </dependencies>

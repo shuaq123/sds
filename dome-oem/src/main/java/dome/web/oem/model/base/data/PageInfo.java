@@ -1,4 +1,4 @@
-package com.example.demo.model.base.data;
+package dome.web.oem.model.base.data;
 
 import lombok.Data;
 
