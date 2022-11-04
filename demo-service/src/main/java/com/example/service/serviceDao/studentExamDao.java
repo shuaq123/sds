@@ -15,7 +15,4 @@ public interface studentExamDao extends BaseService {
 
     List<ExamList> examalist(ExamList examlist) throws ParseException;
 
-
-
-
 }

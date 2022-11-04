@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Data
@@ -25,8 +26,12 @@ public class ExamList implements Serializable {
     @ApiModelProperty("已批阅")
     private Integer isread;
 
+    @ApiModelProperty("考试id")
+    private Integer id;
+
     private Integer pagenum;
     private Integer pagesize;
+    private List<ExamList> examList;
 
 
 }

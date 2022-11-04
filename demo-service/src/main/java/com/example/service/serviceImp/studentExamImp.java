@@ -47,6 +47,7 @@ public class studentExamImp implements studentExamDao {
             ExamList examInfo = new ExamList();
             List<ExamList> examlistarr = new ArrayList<>();
             for (studentExam e:examArr){
+                examInfo.setId(e.getExamid());
                 examInfo.setExamname(e.getExamname());
                 examInfo.setCreatortime(e.getCreatortime());
                 examInfo.setIsnotread(0);
@@ -70,6 +71,7 @@ public class studentExamImp implements studentExamDao {
                     examInfo.setExamstate(0);
                 }
                 examlistarr.add(examInfo);
+
 
 
             }
